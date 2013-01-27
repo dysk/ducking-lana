@@ -21,4 +21,17 @@ class ProductTest < ActiveSupport::TestCase
     assert product.errors[:description].any?
     assert product.errors[:price].any?
   end
+
+  test "invalid image url validation" do
+    p = Product.new
+    p.image_url = 'fsdf'
+    assert p.invalid?
+    assert_equal 'must be a URL for GIF, JPG or PNG image.',  p.errors[:image_url][0]
+  end
+
+  test "valid image url validation" do
+    p = Product.new
+    p.image_url = 'obrazek.jpg'
+    assert p.errors[:image_url].empty?
+  end
 end
