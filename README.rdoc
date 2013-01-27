@@ -1,3 +1,5 @@
 == Witaj w projekcie Księgarnia
 
 To jest projekt szkoleniowy, prosta księgarnia internetowa.
+
+Dziękuję za sciągnięcie mojego projektu, mam nadzieję, że się przyda!!!1111oneoneone
