@@ -9,4 +9,13 @@ class Product < ActiveRecord::Base
         with:    %r{\.(gif|jpg|png)\Z}i,
         message: 'must be a URL for GIF, JPG or PNG image.'
       }
+
+
+  def vat_price
+    if self.price.nil?
+      return 0.0
+    else
+      return self.price*1.23
+    end
+  end
 end
