@@ -30,8 +30,19 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   test "valid image url validation" do
-    p = Product.new
-    p.image_url = 'obrazek.jpg'
-    assert p.errors[:image_url].empty?
+    good = ['aaa.jpg', 'bbb.png', 'ccc.gif', 'aaa.JPG', 'bbb.PNG', 'ccc.GIF']
+    bad  = ['dfsdf', 'product.rb', 'winword.exe']
+
+    good.each do |image|
+      assert new_product(image).valid?, "Image extension #{image.last(3)} not supported"
+    end
+
+    bad.each do |image|
+      assert new_product(image).invalid?, "Strange extension passed through validation"
+    end
+  end
+
+  def new_product(image_url)
+    return Product.new(title: 'Jakis tytul', description: "Jakis opis", price: 100, image_url: image_url)
   end
 end
