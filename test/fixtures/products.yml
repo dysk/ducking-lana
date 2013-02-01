@@ -1,13 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  description: MyText
-  image_url: MyString.jpg
-  price: 9.99
+  title: Podręcznik posiadacza jamnika
+  description: Jak karmić, pielęgnować i dbać o swojego jamnika. Wspaniała pozycja dla wszystkich miłośników rasy.
+  image_url: jamnik.jpg
+  price: 26.99
 
 two:
-  title: MyString2
-  description: MyText
-  image_url: MyString.png
-  price: 9.99
+  title: Podręcznik mopsa dla zaawanosowanych
+  description: Najnowsze techniki pracy z mopsami.
+  image_url: mops.jpg
+  price: 49.99
+
+three:
+  title: Poradnik wędkarski
+  description: Dla wędkarzy
+  image_url: wedkarz.jpg
+  price: 10.12
+
+four:
+  title: Koleje Śląskie
+  description: Jak podróżować po województwie Śląskim
+  image_url: pociag.jpg
+  price: 15.50
