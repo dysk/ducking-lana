@@ -3,8 +3,13 @@
 <% end %>
 
 <h2>Twój koszyk</h2>
-<ul>    
-  <% @cart.line_items.each do |item| %>
-    <li><%= "#{item.product.title}, liczba: #{item.quantity}" %></li>
-  <% end %>
-</ul>
+  <table>
+    <%= render(@cart.line_items) %>
+    <tr class="total_line">
+      <td colspan="2">Total</td>
+      <td class="total_cell">
+      <%= number_to_currency(@cart.total_price, :unit => "PLN", :separator => ",", :delimiter => "", :format => "%n %u") %>
+      </td>
+    </tr>
+  </table>
+<%= button_to 'Wyczyść koszyk', @cart, method: :delete, data: { confirm: 'Czy aby na pewno?' } %>
