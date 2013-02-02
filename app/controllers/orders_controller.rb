@@ -54,6 +54,7 @@ class OrdersController < ApplicationController
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver
+        OrderNotifier.shipped(@order).deliver
         format.html { redirect_to store_url, notice: 'Dziękujemy za złożenie zamówienia.' }
         format.json { render json: @order, status: :created, location: @order }
       else
