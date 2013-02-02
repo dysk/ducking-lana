@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  layout 'panel'
+
   # GET /products
   # GET /products.json
   def index
