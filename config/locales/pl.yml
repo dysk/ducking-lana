@@ -1,4 +1,8 @@
 pl:
+  will_paginate:
+    previous_label: "&#8592; Wstecz"
+    next_label: "Naprzód &#8594;"
+    page_gap: "&hellip;"
   store:
     add_to_cart: 'Dodaj do koszyka'
   date:
