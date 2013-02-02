@@ -11,6 +11,7 @@ class Product < ActiveRecord::Base
       }
 
   has_many :line_items
+  has_many :orders, through: :line_items
 
   before_destroy :check_if_referenced_by_line_item?
 
