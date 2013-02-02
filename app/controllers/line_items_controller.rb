@@ -53,6 +53,7 @@ class LineItemsController < ApplicationController
           notice: 'Dodano poprawnie.' }
         format.json { render json: @line_item,
           status: :created, location: @line_item }
+        format.js
       else
         format.html { redirect_to store_path,
           notice: 'Nie dodano poprawnie.' }
