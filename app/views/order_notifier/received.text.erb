@@ -1,0 +1,8 @@
+Witaj <%= @order.name %>,
+  Dziękujemy za złożenie zamówienia w Księgarni dla Mopsów
+  Zamówiłeś następujące pozycje:
+
+  <%= render @order.line_items %>
+
+  Usiądź wygodnie i odpocznij sobie. Kiedy skompletujemy
+  zamówienie poinformujemy Cię o tym mailem.

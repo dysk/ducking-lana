@@ -1,4 +1,9 @@
 pl:
+  order_notifier:
+    received:
+      subject: 'Zamówienie zostało złożone'
+    shipped:
+      subject: 'Paczka z zamówieniem została wysłana'
   will_paginate:
     previous_label: "&#8592; Wstecz"
     next_label: "Naprzód &#8594;"
