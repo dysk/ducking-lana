@@ -1,4 +1,6 @@
 Ksiegarnia::Application.routes.draw do
+  devise_for :admins
+
   resources :orders
 
   resources :line_items

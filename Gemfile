@@ -8,6 +8,7 @@ gem 'rails', '3.2.8'
 gem 'mysql2'
 gem 'will_paginate', '~> 3.0'
 gem 'jquery-rails'
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.
