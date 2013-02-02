@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_filter :authenticate_admin!
   layout 'panel'
 
   # GET /products
