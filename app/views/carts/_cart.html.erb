@@ -10,3 +10,4 @@
   </table>
   <%= button_to 'Opróżnij koszyk', cart, method: 
         :delete, data: { confirm: 'Czy aby na pewno?' } %>
+  <%= button_to "Zamawiam!", new_order_path, method: :get %>
