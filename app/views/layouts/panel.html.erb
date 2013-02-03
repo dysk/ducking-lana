@@ -10,6 +10,10 @@
     <div id="banner">
       <%= @page_title || "Panel Sprzedawcy" %>
     </div>
+    <div>
+      Jesteś zalogowany jako: <%= current_admin.email %> |
+       <%= button_to 'Wyloguj', destroy_admin_session_path, method: :delete %>
+    </div>
     <div id="columns">
       <div id="side">
       <div id="main">
