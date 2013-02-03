@@ -9,6 +9,8 @@ gem 'mysql2'
 gem 'will_paginate', '~> 3.0'
 gem 'jquery-rails'
 gem 'devise'
+gem "less-rails"
+gem "twitter-bootstrap-rails"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -17,7 +19,10 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  # gem 'libv8', '3.3.10.4'
+  # gem 'libv8', '~> 3.11.8'
+  # gem 'libv8'
+  gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
 end

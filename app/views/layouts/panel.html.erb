@@ -11,7 +11,7 @@
       <%= @page_title || "Panel Sprzedawcy" %>
     </div>
     <div>
-      Jesteś zalogowany jako: <%= current_admin.email %> |
+      Jesteś zalogowany jako: <%= current_admin.email %> | Ostatnie logowanie: <%= time_ago_in_words(current_admin.last_sign_in_at) %> temu |
        <%= button_to 'Wyloguj', destroy_admin_session_path, method: :delete %>
     </div>
     <div id="columns">

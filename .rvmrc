@@ -1,0 +1,6 @@
+if [[ -s "$HOME/.rvm/environments/rvm use ruby-1.9.3-p194@ksiegarnia" ]] ; then
+  echo "Using Ruby ruby-1.9.3-p194 with gemset ksiegarnia"
+  . "$HOME/.rvm/environments/ruby-1.9.3-p194@ksiegarnia"
+else
+  rvm use "ruby-1.9.3-p194@ksiegarnia" --create
+fi
