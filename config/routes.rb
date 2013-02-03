@@ -1,4 +1,6 @@
 Ksiegarnia::Application.routes.draw do
+  resources :posts
+
   devise_for :admins, :controllers => {:sessions => "sessions"}
 
   resources :orders

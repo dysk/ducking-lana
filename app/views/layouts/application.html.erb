@@ -51,7 +51,16 @@
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
-          </div><!--/.nav-collapse -->
+            <% if current_admin %>
+               <div>
+                Jesteś zalogowany jako: <%= current_admin.email %> | Ostatnie logowanie: <%= time_ago_in_words(current_admin.last_sign_in_at) %> temu |
+                <%= button_to 'Wyloguj', destroy_admin_session_path, method: :delete %>
+              </div>
+            <% else %>
+              <%= link_to 'Zaloguj się', new_admin_session_path %>
+            <% end %>
+          </div>
+          <!--/.nav-collapse -->
         </div>
       </div>
     </div>
